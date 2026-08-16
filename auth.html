@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Edvora — Login</title>
+
+    <link
+        rel="stylesheet"
+        href="auth.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =====================================
+         EDVORA AUTHENTICATION
+         DAY 2 — PART 1A
+         ===================================== -->
+
+    <main class="auth-page">
+
+
+        <!-- =====================================
+             LEFT BRAND PANEL
+             ===================================== -->
+
+        <section class="auth-brand">
+
+            <div class="brand-content">
+
+
+                <!-- LOGO -->
+
+                <a
+                    href="index.html"
+                    class="auth-logo"
+                >
+
+                    <span class="auth-logo-icon">
+                        E
+                    </span>
+
+                    <span class="auth-logo-name">
+                        Edvora
+                    </span>
+
+                </a>
+
+
+                <!-- BRAND MESSAGE -->
+
+                <div class="brand-message">
+
+                    <span class="brand-label">
+                        SMART SCHOOL TRANSPORT
+                    </span>
+
+                    <h1>
+                        School transportation,
+                        <span>simplified.</span>
+                    </h1>
+
+                    <p>
+                        Connect schools, drivers,
+                        parents and students through
+                        one smarter transportation platform.
+                    </p>
+
+                </div>
+
+
+                <!-- BRAND BENEFITS -->
+
+                <div class="brand-points">
+
+
+                    <div class="brand-point">
+
+                        <span>
+                            ✓
+                        </span>
+
+                        <p>
+                            Simple transportation management
+                        </p>
+
+                    </div>
+
+
+                    <div class="brand-point">
+
+                        <span>
+                            ✓
+                        </span>
+
+                        <p>
+                            Designed for modern schools
+                        </p>
+
+                    </div>
+
+
+                    <div class="brand-point">
+
+                        <span>
+                            ✓
+                        </span>
+
+                        <p>
+                            One platform for everyone
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- DECORATIVE BACKGROUND -->
+
+            <div class="brand-decoration">
+
+                <div
+                    class="decoration-circle circle-one">
+                </div>
+
+                <div
+                    class="decoration-circle circle-two">
+                </div>
+
+                <div
+                    class="decoration-grid">
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             RIGHT AUTH PANEL
+             ===================================== -->
+
+        <section class="auth-panel">
+
+            <div class="auth-container">
+
+
+                <!-- MOBILE LOGO -->
+
+                <a
+                    href="index.html"
+                    class="mobile-auth-logo"
+                >
+
+                    <span class="auth-logo-icon">
+                        E
+                    </span>
+
+                    <span class="auth-logo-name">
+                        Edvora
+                    </span>
+
+                </a>
+
+
+                <!-- =================================
+                     LOGIN SCREEN
+                     ================================= -->
+
+                <div
+                    class="auth-screen login-screen"
+                    id="login-screen"
+                >
+
+
+                    <!-- LOGIN HEADER -->
+
+                    <div class="auth-header">
+
+                        <span class="auth-label">
+                            WELCOME BACK
+                        </span>
+
+                        <h2>
+                            Sign in to Edvora
+                        </h2>
+
+                        <p>
+                            Access your school transportation
+                            dashboard.
+                        </p>
+
+                    </div>
+
+
+                    <!-- LOGIN FORM -->
+
+                    <form
+                        id="login-form"
+                        class="auth-form"
+                    >
+
+
+                        <!-- EMAIL -->
+
+                        <div class="auth-field">
+
+                            <label for="login-email">
+                                Email address
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <span class="input-icon">
+                                    ✉
+                                </span>
+
+                                <input
+                                    type="email"
+                                    id="login-email"
+                                    name="email"
+                                    placeholder="you@example.com"
+                                    autocomplete="email"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PASSWORD -->
+
+                        <div class="auth-field">
+
+                            <div class="field-header">
+
+                                <label for="login-password">
+                                    Password
+                                </label>
+
+                                <a
+                                    href="#"
+                                    class="forgot-password"
+                                >
+                                    Forgot password?
+                                </a>
+
+                            </div>
+
+
+                            <div class="input-wrapper">
+
+                                <span class="input-icon">
+                                    🔒
+                                </span>
+
+                                <input
+                                    type="password"
+                                    id="login-password"
+                                    name="password"
+                                    placeholder="Enter your password"
+                                    autocomplete="current-password"
+                                    required
+                                >
+
+                                <button
+                                    type="button"
+                                    class="password-toggle"
+                                    data-target="login-password"
+                                    aria-label="Show password"
+                                >
+                                    👁
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- REMEMBER ME -->
+
+                        <div class="remember-row">
+
+                            <label class="checkbox-label">
+
+                                <input
+                                    type="checkbox"
+                                    id="remember-me"
+                                >
+
+                                <span>
+                                    Remember me
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- LOGIN BUTTON -->
+
+                        <button
+                            type="submit"
+                            class="auth-submit"
+                        >
+
+                            <span>
+                                Sign in
+                            </span>
+
+                            <span>
+                                →
+                            </span>
+
+                        </button>
+
+
+                        <!-- LOGIN MESSAGE -->
+
+                        <div
+                            id="login-message"
+                            class="auth-message"
+                        ></div>
+
+
+                    </form>
+
+
+                    <!-- DIVIDER -->
+
+                    <div class="auth-divider">
+
+                        <span></span>
+
+                        <p>
+                            or
+                        </p>
+
+                        <span></span>
+
+                    </div>
+
+
+                    <!-- CREATE ACCOUNT -->
+
+                    <div class="auth-switch">
+
+                        <p>
+                            Don't have an account?
+                        </p>
+
+                        <button
+                            type="button"
+                            id="show-signup"
+                            class="switch-button"
+                        >
+                            Create an account
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+
+                <!--
+                    PART 1B WILL CONTINUE HERE
+                -->
+                <!-- =====================================
+     EDVORA AUTHENTICATION
+     DAY 2 — PART 1B
+     ===================================== -->
+
+
+<!-- =====================================
+     SIGNUP SCREEN
+     ===================================== -->
+
+<div
+    class="auth-screen signup-screen"
+    id="signup-screen"
+    hidden
+>
+
+
+    <!-- SIGNUP HEADER -->
+
+    <div class="auth-header">
+
+        <span class="auth-label">
+            GET STARTED
+        </span>
+
+        <h2>
+            Create your Edvora account
+        </h2>
+
+        <p>
+            Choose your role and start using
+            smarter school transportation.
+        </p>
+
+    </div>
+
+
+    <!-- SIGNUP FORM -->
+
+    <form
+        id="signup-form"
+        class="auth-form"
+    >
+
+
+        <!-- FULL NAME -->
+
+        <div class="auth-field">
+
+            <label for="signup-name">
+                Full name
+            </label>
+
+            <div class="input-wrapper">
+
+                <span class="input-icon">
+                    👤
+                </span>
+
+                <input
+                    type="text"
+                    id="signup-name"
+                    name="name"
+                    placeholder="Enter your full name"
+                    autocomplete="name"
+                    required
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- EMAIL -->
+
+        <div class="auth-field">
+
+            <label for="signup-email">
+                Email address
+            </label>
+
+            <div class="input-wrapper">
+
+                <span class="input-icon">
+                    ✉
+                </span>
+
+                <input
+                    type="email"
+                    id="signup-email"
+                    name="email"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    required
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- ACCOUNT TYPE -->
+
+        <div class="auth-field">
+
+            <label>
+                Choose account type
+            </label>
+
+
+            <div class="role-grid">
+
+
+                <!-- PARENT -->
+
+                <label class="role-option">
+
+                    <input
+                        type="radio"
+                        name="role"
+                        value="parent"
+                        checked
+                    >
+
+                    <span class="role-card">
+
+                        <span class="role-icon">
+                            👨‍👩‍👧
+                        </span>
+
+                        <span class="role-info">
+
+                            <strong>
+                                Parent
+                            </strong>
+
+                            <small>
+                                Manage student transport
+                            </small>
+
+                        </span>
+
+                    </span>
+
+                </label>
+
+
+                <!-- DRIVER -->
+
+                <label class="role-option">
+
+                    <input
+                        type="radio"
+                        name="role"
+                        value="driver"
+                    >
+
+                    <span class="role-card">
+
+                        <span class="role-icon">
+                            🚌
+                        </span>
+
+                        <span class="role-info">
+
+                            <strong>
+                                Driver
+                            </strong>
+
+                            <small>
+                                Manage assigned routes
+                            </small>
+
+                        </span>
+
+                    </span>
+
+                </label>
+
+
+                <!-- SCHOOL ADMIN -->
+
+                <label class="role-option">
+
+                    <input
+                        type="radio"
+                        name="role"
+                        value="admin"
+                    >
+
+                    <span class="role-card">
+
+                        <span class="role-icon">
+                            🏫
+                        </span>
+
+                        <span class="role-info">
+
+                            <strong>
+                                School Admin
+                            </strong>
+
+                            <small>
+                                Manage school transport
+                            </small>
+
+                        </span>
+
+                    </span>
+
+                </label>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- PASSWORD -->
+
+        <div class="auth-field">
+
+            <label for="signup-password">
+                Password
+            </label>
+
+            <div class="input-wrapper">
+
+                <span class="input-icon">
+                    🔒
+                </span>
+
+                <input
+                    type="password"
+                    id="signup-password"
+                    name="password"
+                    placeholder="Create a password"
+                    autocomplete="new-password"
+                    minlength="8"
+                    required
+                >
+
+                <button
+                    type="button"
+                    class="password-toggle"
+                    data-target="signup-password"
+                    aria-label="Show password"
+                >
+                    👁
+                </button>
+
+            </div>
+
+            <small class="field-hint">
+                Use at least 8 characters.
+            </small>
+
+        </div>
+
+
+        <!-- CONFIRM PASSWORD -->
+
+        <div class="auth-field">
+
+            <label for="signup-confirm-password">
+                Confirm password
+            </label>
+
+            <div class="input-wrapper">
+
+                <span class="input-icon">
+                    🔐
+                </span>
+
+                <input
+                    type="password"
+                    id="signup-confirm-password"
+                    name="confirm-password"
+                    placeholder="Confirm your password"
+                    autocomplete="new-password"
+                    required
+                >
+
+                <button
+                    type="button"
+                    class="password-toggle"
+                    data-target="signup-confirm-password"
+                    aria-label="Show password"
+                >
+                    👁
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- TERMS -->
+
+        <div class="terms-row">
+
+            <label class="checkbox-label">
+
+                <input
+                    type="checkbox"
+                    id="terms"
+                    required
+                >
+
+                <span>
+
+                    I agree to the
+
+                    <a href="#">
+                        Terms
+                    </a>
+
+                    and
+
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+
+                </span>
+
+            </label>
+
+        </div>
+
+
+        <!-- SIGNUP BUTTON -->
+
+        <button
+            type="submit"
+            class="auth-submit"
+        >
+
+            <span>
+                Create account
+            </span>
+
+            <span>
+                →
+            </span>
+
+        </button>
+
+
+        <!-- SIGNUP MESSAGE -->
+
+        <div
+            id="signup-message"
+            class="auth-message"
+        ></div>
+
+
+    </form>
+
+
+    <!-- LOGIN SWITCH -->
+
+    <div class="auth-switch">
+
+        <p>
+            Already have an account?
+        </p>
+
+        <button
+            type="button"
+            id="show-login"
+            class="switch-button"
+        >
+            Sign in
+        </button>
+
+    </div>
+
+
+</div>
+
+
+<!-- =====================================
+     CLOSE AUTH CONTAINER
+     ===================================== -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+<!-- =====================================
+     JAVASCRIPT
+     ===================================== -->
+
+<script src="auth.js"></script>
+
+
+</body>
+
+</html>
