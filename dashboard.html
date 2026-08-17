@@ -1,0 +1,1233 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Edvora — Dashboard</title>
+
+    <link
+        rel="stylesheet"
+        href="dashboard.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =====================================
+         EDVORA DASHBOARD
+         DAY 3 — PART 1A
+         ===================================== -->
+
+    <div class="dashboard-layout">
+
+
+        <!-- =================================
+             SIDEBAR
+             ================================= -->
+
+        <aside
+            class="sidebar"
+            id="sidebar"
+        >
+
+
+            <!-- LOGO -->
+
+            <div class="sidebar-top">
+
+                <a
+                    href="index.html"
+                    class="dashboard-logo"
+                >
+
+                    <span class="dashboard-logo-icon">
+                        E
+                    </span>
+
+                    <span class="dashboard-logo-name">
+                        Edvora
+                    </span>
+
+                </a>
+
+
+                <!-- CLOSE SIDEBAR -->
+
+                <button
+                    type="button"
+                    class="sidebar-close"
+                    id="sidebar-close"
+                    aria-label="Close menu"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <!-- =================================
+                 USER MINI PROFILE
+                 ================================= -->
+
+            <div class="sidebar-user">
+
+                <div class="user-avatar">
+                    A
+                </div>
+
+                <div class="user-info">
+
+                    <strong>
+                        Alex Kumar
+                    </strong>
+
+                    <span>
+                        Parent Account
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 NAVIGATION
+                 ================================= -->
+
+            <nav
+                class="sidebar-nav"
+                aria-label="Dashboard navigation"
+            >
+
+
+                <span class="nav-section-title">
+                    MAIN MENU
+                </span>
+
+
+                <!-- OVERVIEW -->
+
+                <a
+                    href="#overview"
+                    class="nav-link active"
+                    data-page="overview"
+                >
+
+                    <span class="nav-icon">
+                        ⌂
+                    </span>
+
+                    <span>
+                        Overview
+                    </span>
+
+                </a>
+
+
+                <!-- MY BUS -->
+
+                <a
+                    href="#my-bus"
+                    class="nav-link"
+                    data-page="my-bus"
+                >
+
+                    <span class="nav-icon">
+                        🚌
+                    </span>
+
+                    <span>
+                        My Bus
+                    </span>
+
+                </a>
+
+
+                <!-- ROUTE -->
+
+                <a
+                    href="#route"
+                    class="nav-link"
+                    data-page="route"
+                >
+
+                    <span class="nav-icon">
+                        ◉
+                    </span>
+
+                    <span>
+                        Route
+                    </span>
+
+                </a>
+
+
+                <!-- NOTIFICATIONS -->
+
+                <a
+                    href="#notifications"
+                    class="nav-link"
+                    data-page="notifications"
+                >
+
+                    <span class="nav-icon">
+                        ♢
+                    </span>
+
+                    <span>
+                        Notifications
+                    </span>
+
+                    <span class="nav-badge">
+                        3
+                    </span>
+
+                </a>
+
+
+
+                <span class="nav-section-title">
+                    ACCOUNT
+                </span>
+
+
+                <!-- PROFILE -->
+
+                <a
+                    href="#profile"
+                    class="nav-link"
+                    data-page="profile"
+                >
+
+                    <span class="nav-icon">
+                        ◯
+                    </span>
+
+                    <span>
+                        Profile
+                    </span>
+
+                </a>
+
+
+                <!-- SETTINGS -->
+
+                <a
+                    href="#settings"
+                    class="nav-link"
+                    data-page="settings"
+                >
+
+                    <span class="nav-icon">
+                        ⚙
+                    </span>
+
+                    <span>
+                        Settings
+                    </span>
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- =================================
+                 SIDEBAR BOTTOM
+                 ================================= -->
+
+            <div class="sidebar-bottom">
+
+
+                <!-- HELP CARD -->
+
+                <div class="sidebar-help">
+
+                    <div class="help-icon">
+                        ?
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Need help?
+                        </strong>
+
+                        <p>
+                            We're here for you.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LOGOUT -->
+
+                <button
+                    type="button"
+                    class="logout-button"
+                    id="logout-button"
+                >
+
+                    <span>
+                        ↪
+                    </span>
+
+                    <span>
+                        Log out
+                    </span>
+
+                </button>
+
+            </div>
+
+
+        </aside>
+
+
+
+        <!-- =================================
+             MAIN AREA
+             ================================= -->
+
+        <div class="dashboard-main">
+
+
+            <!-- =================================
+                 TOP HEADER
+                 ================================= -->
+
+            <header class="dashboard-header">
+
+
+                <!-- MOBILE MENU -->
+
+                <button
+                    type="button"
+                    class="menu-button"
+                    id="menu-button"
+                    aria-label="Open menu"
+                >
+                    ☰
+                </button>
+
+
+                <!-- PAGE TITLE -->
+
+                <div class="header-title">
+
+                    <span>
+                        PARENT PORTAL
+                    </span>
+
+                    <h1>
+                        Dashboard
+                    </h1>
+
+                </div>
+
+
+                <!-- HEADER ACTIONS -->
+
+                <div class="header-actions">
+
+
+                    <!-- NOTIFICATION -->
+
+                    <button
+                        type="button"
+                        class="header-icon-button"
+                        id="notification-button"
+                        aria-label="Notifications"
+                    >
+
+                        ♢
+
+                        <span class="header-notification-dot">
+                        </span>
+
+                    </button>
+
+
+                    <!-- PROFILE -->
+
+                    <button
+                        type="button"
+                        class="header-profile"
+                        id="profile-button"
+                    >
+
+                        <span class="header-avatar">
+                            A
+                        </span>
+
+                        <span class="header-profile-text">
+
+                            <strong>
+                                Alex Kumar
+                            </strong>
+
+                            <small>
+                                Parent
+                            </small>
+
+                        </span>
+
+                        <span class="profile-arrow">
+                            ˅
+                        </span>
+
+                    </button>
+
+                </div>
+
+
+            </header>
+
+
+
+            <!-- =================================
+                 DASHBOARD CONTENT
+                 ================================= -->
+
+            <main
+                class="dashboard-content"
+                id="dashboard-content"
+            >
+
+
+                <!-- =================================
+                     WELCOME HERO
+                     ================================= -->
+
+                <section
+                    class="welcome-section"
+                    id="overview"
+                >
+
+                    <div class="welcome-text">
+
+                        <span class="welcome-label">
+                            MONDAY, AUGUST 17
+                        </span>
+
+                        <h2>
+                            Good morning, Alex 👋
+                        </h2>
+
+                        <p>
+                            Here's everything you need
+                            to know about today's
+                            school transportation.
+                        </p>
+
+                    </div>
+
+
+                    <div class="welcome-visual">
+
+                        <div class="bus-illustration">
+                            🚌
+                        </div>
+
+                        <div class="visual-circle">
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     STATUS CARDS
+                     ================================= -->
+
+                <section class="status-grid">
+
+
+                    <!-- BUS STATUS -->
+
+                    <article class="status-card">
+
+                        <div class="status-card-top">
+
+                            <div class="status-icon bus-icon">
+                                🚌
+                            </div>
+
+                            <span class="status-pill online">
+                                ON TIME
+                            </span>
+
+                        </div>
+
+                        <span class="status-label">
+                            BUS STATUS
+                        </span>
+
+                        <h3>
+                            Bus #ED-204
+                        </h3>
+
+                        <p>
+                            Currently running normally
+                        </p>
+
+                    </article>
+
+
+                    <!-- NEXT PICKUP -->
+
+                    <article class="status-card">
+
+                        <div class="status-card-top">
+
+                            <div class="status-icon pickup-icon">
+                                ◉
+                            </div>
+
+                            <span class="status-pill upcoming">
+                                UPCOMING
+                            </span>
+
+                        </div>
+
+                        <span class="status-label">
+                            NEXT PICKUP
+                        </span>
+
+                        <h3>
+                            07:35 AM
+                        </h3>
+
+                        <p>
+                            Model Town • 8 min away
+                        </p>
+
+                    </article>
+
+
+                    <!-- STUDENT -->
+
+                    <article class="status-card">
+
+                        <div class="status-card-top">
+
+                            <div class="status-icon student-icon">
+                                ●
+                            </div>
+
+                            <span class="status-pill ready">
+                                READY
+                            </span>
+
+                        </div>
+
+                        <span class="status-label">
+                            STUDENT
+                        </span>
+
+                        <h3>
+                            Aarav Kumar
+                        </h3>
+
+                        <p>
+                            Grade 7 • Route 04
+                        </p>
+
+                    </article>
+
+
+                </section>
+                                <!-- =================================
+                     ROUTE + DRIVER SECTION
+                     ================================= -->
+
+                <section class="dashboard-grid">
+
+
+                    <!-- =================================
+                         ROUTE PROGRESS
+                         ================================= -->
+
+                    <article
+                        class="dashboard-card route-card"
+                        id="route"
+                    >
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <span class="card-label">
+                                    TODAY'S ROUTE
+                                </span>
+
+                                <h3>
+                                    Route 04
+                                </h3>
+
+                            </div>
+
+                            <button
+                                type="button"
+                                class="card-action"
+                            >
+                                View route →
+                            </button>
+
+                        </div>
+
+
+                        <!-- ROUTE STATUS -->
+
+                        <div class="route-status">
+
+                            <div class="route-point completed">
+
+                                <span class="route-dot">
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Green Valley School
+                                    </strong>
+
+                                    <small>
+                                        07:05 AM • Departed
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="route-line completed-line">
+                            </div>
+
+
+                            <div class="route-point current">
+
+                                <span class="route-dot">
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Model Town
+                                    </strong>
+
+                                    <small>
+                                        07:35 AM • Next stop
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="route-line">
+                            </div>
+
+
+                            <div class="route-point">
+
+                                <span class="route-dot">
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Civil Lines
+                                    </strong>
+
+                                    <small>
+                                        07:45 AM • Upcoming
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="route-line">
+                            </div>
+
+
+                            <div class="route-point">
+
+                                <span class="route-dot">
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        School Campus
+                                    </strong>
+
+                                    <small>
+                                        08:00 AM • Final stop
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ROUTE PROGRESS -->
+
+                        <div class="progress-section">
+
+                            <div class="progress-header">
+
+                                <span>
+                                    Route progress
+                                </span>
+
+                                <strong>
+                                    38%
+                                </strong>
+
+                            </div>
+
+                            <div class="progress-bar">
+
+                                <span
+                                    style="width: 38%;"
+                                ></span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =================================
+                         DRIVER CARD
+                         ================================= -->
+
+                    <article
+                        class="dashboard-card driver-card"
+                        id="my-bus"
+                    >
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <span class="card-label">
+                                    YOUR DRIVER
+                                </span>
+
+                                <h3>
+                                    Driver information
+                                </h3>
+
+                            </div>
+
+                            <span class="driver-status">
+                                ● Active
+                            </span>
+
+                        </div>
+
+
+                        <!-- DRIVER PROFILE -->
+
+                        <div class="driver-profile">
+
+                            <div class="driver-avatar">
+                                R
+                            </div>
+
+                            <div class="driver-info">
+
+                                <h4>
+                                    Rajesh Singh
+                                </h4>
+
+                                <p>
+                                    Certified Edvora Driver
+                                </p>
+
+                                <div class="driver-rating">
+
+                                    <span>
+                                        ★
+                                    </span>
+
+                                    <span>
+                                        4.9
+                                    </span>
+
+                                    <small>
+                                        • 128 trips
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- BUS DETAILS -->
+
+                        <div class="bus-details">
+
+                            <div class="bus-detail">
+
+                                <span>
+                                    Bus number
+                                </span>
+
+                                <strong>
+                                    ED-204
+                                </strong>
+
+                            </div>
+
+
+                            <div class="bus-detail">
+
+                                <span>
+                                    Route
+                                </span>
+
+                                <strong>
+                                    Route 04
+                                </strong>
+
+                            </div>
+
+
+                            <div class="bus-detail">
+
+                                <span>
+                                    Seats
+                                </span>
+
+                                <strong>
+                                    32 / 40
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- DRIVER ACTION -->
+
+                        <button
+                            type="button"
+                            class="outline-button"
+                            id="contact-driver"
+                        >
+
+                            <span>
+                                Contact driver
+                            </span>
+
+                            <span>
+                                →
+                            </span>
+
+                        </button>
+
+                    </article>
+
+                </section>
+
+
+
+                <!-- =================================
+                     QUICK ACTIONS
+                     ================================= -->
+
+                <section class="quick-actions-section">
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <span class="card-label">
+                                QUICK ACTIONS
+                            </span>
+
+                            <h3>
+                                What would you like to do?
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="quick-actions-grid">
+
+
+                        <button
+                            type="button"
+                            class="quick-action"
+                            data-action="track"
+                        >
+
+                            <span class="quick-action-icon">
+                                ◉
+                            </span>
+
+                            <span class="quick-action-text">
+
+                                <strong>
+                                    Track bus
+                                </strong>
+
+                                <small>
+                                    View current location
+                                </small>
+
+                            </span>
+
+                            <span class="quick-action-arrow">
+                                →
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="quick-action"
+                            data-action="route"
+                        >
+
+                            <span class="quick-action-icon">
+                                ⌖
+                            </span>
+
+                            <span class="quick-action-text">
+
+                                <strong>
+                                    View route
+                                </strong>
+
+                                <small>
+                                    See all stops
+                                </small>
+
+                            </span>
+
+                            <span class="quick-action-arrow">
+                                →
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="quick-action"
+                            data-action="report"
+                        >
+
+                            <span class="quick-action-icon">
+                                !
+                            </span>
+
+                            <span class="quick-action-text">
+
+                                <strong>
+                                    Report issue
+                                </strong>
+
+                                <small>
+                                    Tell school administration
+                                </small>
+
+                            </span>
+
+                            <span class="quick-action-arrow">
+                                →
+                            </span>
+
+                        </button>
+
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     RECENT NOTIFICATIONS
+                     ================================= -->
+
+                <section
+                    class="dashboard-card notifications-card"
+                    id="notifications"
+                >
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <span class="card-label">
+                                RECENT ACTIVITY
+                            </span>
+
+                            <h3>
+                                Notifications
+                            </h3>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            class="card-action"
+                            id="view-all-notifications"
+                        >
+                            View all →
+                        </button>
+
+                    </div>
+
+
+                    <div class="notification-list">
+
+
+                        <!-- NOTIFICATION 1 -->
+
+                        <div class="notification-item unread">
+
+                            <div class="notification-icon bus-notification">
+                                🚌
+                            </div>
+
+                            <div class="notification-content">
+
+                                <strong>
+                                    Bus is on schedule
+                                </strong>
+
+                                <p>
+                                    Bus ED-204 has started
+                                    today's route.
+                                </p>
+
+                                <small>
+                                    5 minutes ago
+                                </small>
+
+                            </div>
+
+                            <span class="unread-dot">
+                            </span>
+
+                        </div>
+
+
+                        <!-- NOTIFICATION 2 -->
+
+                        <div class="notification-item">
+
+                            <div class="notification-icon route-notification">
+                                ◉
+                            </div>
+
+                            <div class="notification-content">
+
+                                <strong>
+                                    Route update
+                                </strong>
+
+                                <p>
+                                    Model Town pickup is
+                                    scheduled for 07:35 AM.
+                                </p>
+
+                                <small>
+                                    20 minutes ago
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- NOTIFICATION 3 -->
+
+                        <div class="notification-item">
+
+                            <div class="notification-icon school-notification">
+                                ✓
+                            </div>
+
+                            <div class="notification-content">
+
+                                <strong>
+                                    Student marked ready
+                                </strong>
+
+                                <p>
+                                    Aarav is ready for
+                                    today's pickup.
+                                </p>
+
+                                <small>
+                                    35 minutes ago
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     PROFILE PREVIEW
+                     ================================= -->
+
+                <section
+                    class="dashboard-card profile-preview"
+                    id="profile"
+                >
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <span class="card-label">
+                                ACCOUNT
+                            </span>
+
+                            <h3>
+                                Student information
+                            </h3>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            class="card-action"
+                        >
+                            Edit profile →
+                        </button>
+
+                    </div>
+
+
+                    <div class="student-profile">
+
+                        <div class="student-avatar">
+                            A
+                        </div>
+
+                        <div class="student-details">
+
+                            <h4>
+                                Aarav Kumar
+                            </h4>
+
+                            <p>
+                                Grade 7 • Section A
+                            </p>
+
+                        </div>
+
+
+                        <div class="student-school">
+
+                            <span>
+                                School
+                            </span>
+
+                            <strong>
+                                Green Valley School
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     FOOTER
+                     ================================= -->
+
+                <footer class="dashboard-footer">
+
+                    <p>
+                        © 2026 Edvora. Smart school
+                        transportation.
+                    </p>
+
+                    <div>
+
+                        <a href="#">
+                            Privacy
+                        </a>
+
+                        <a href="#">
+                            Support
+                        </a>
+
+                    </div>
+
+                </footer>
+
+
+            </main>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================
+         OVERLAY FOR MOBILE SIDEBAR
+         ===================================== -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebar-overlay"
+    ></div>
+
+
+    <!-- =====================================
+         JAVASCRIPT
+         ===================================== -->
+
+    <script src="dashboard.js"></script>
+
+<a href="bus.html">My Bus</a>
+</a>
+
+</body>
+
+</html>
