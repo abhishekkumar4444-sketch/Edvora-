@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Edvora — Bus & Routes</title>
+
+    <link
+        rel="stylesheet"
+        href="bus.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =====================================
+         EDVORA BUS MANAGEMENT
+         DAY 4 — HTML PART 1A
+         ===================================== -->
+
+    <div class="bus-app">
+
+
+        <!-- =================================
+             SIDEBAR
+             ================================= -->
+
+        <aside
+            class="bus-sidebar"
+            id="bus-sidebar"
+        >
+
+            <div class="bus-sidebar-top">
+
+                <a
+                    href="dashboard.html"
+                    class="bus-logo"
+                >
+
+                    <span class="bus-logo-icon">
+                        E
+                    </span>
+
+                    <span class="bus-logo-name">
+                        Edvora
+                    </span>
+
+                </a>
+
+
+                <button
+                    type="button"
+                    class="bus-close"
+                    id="bus-close"
+                    aria-label="Close menu"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <!-- USER -->
+
+            <div class="bus-user">
+
+                <div class="bus-user-avatar">
+                    A
+                </div>
+
+                <div>
+
+                    <strong>
+                        Alex Kumar
+                    </strong>
+
+                    <span>
+                        Parent Account
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="bus-nav">
+
+                <span class="bus-nav-title">
+                    MAIN MENU
+                </span>
+
+
+                <a
+                    href="dashboard.html"
+                    class="bus-nav-link"
+                >
+
+                    <span>
+                        ⌂
+                    </span>
+
+                    Dashboard
+
+                </a>
+
+
+                <a
+                    href="bus.html"
+                    class="bus-nav-link active"
+                >
+
+                    <span>
+                        🚌
+                    </span>
+
+                    My Bus
+
+                </a>
+
+
+                <a
+                    href="#routes"
+                    class="bus-nav-link"
+                >
+
+                    <span>
+                        ◉
+                    </span>
+
+                    Routes
+
+                </a>
+
+
+                <a
+                    href="#notifications"
+                    class="bus-nav-link"
+                >
+
+                    <span>
+                        ♢
+                    </span>
+
+                    Notifications
+
+                    <small>
+                        3
+                    </small>
+
+                </a>
+
+
+                <span class="bus-nav-title">
+                    ACCOUNT
+                </span>
+
+
+                <a
+                    href="#profile"
+                    class="bus-nav-link"
+                >
+
+                    <span>
+                        ◯
+                    </span>
+
+                    Profile
+
+                </a>
+
+
+                <a
+                    href="#settings"
+                    class="bus-nav-link"
+                >
+
+                    <span>
+                        ⚙
+                    </span>
+
+                    Settings
+
+                </a>
+
+            </nav>
+
+
+            <!-- SIDEBAR BOTTOM -->
+
+            <div class="bus-sidebar-bottom">
+
+                <div class="bus-help">
+
+                    <span>
+                        ?
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Need help?
+                        </strong>
+
+                        <small>
+                            Contact Edvora support
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="bus-logout"
+                    id="bus-logout"
+                >
+
+                    ↪
+
+                    <span>
+                        Log out
+                    </span>
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- =================================
+             MAIN AREA
+             ================================= -->
+
+        <div class="bus-main">
+
+
+            <!-- HEADER -->
+
+            <header class="bus-header">
+
+                <button
+                    type="button"
+                    class="bus-menu"
+                    id="bus-menu"
+                    aria-label="Open menu"
+                >
+                    ☰
+                </button>
+
+
+                <div class="bus-header-title">
+
+                    <span>
+                        TRANSPORTATION
+                    </span>
+
+                    <h1>
+                        Buses & Routes
+                    </h1>
+
+                </div>
+
+
+                <div class="bus-header-actions">
+
+                    <button
+                        type="button"
+                        class="bus-notification-button"
+                        id="bus-notification"
+                        aria-label="Notifications"
+                    >
+
+                        ♢
+
+                        <i></i>
+
+                    </button>
+
+
+                    <div class="bus-header-avatar">
+                        A
+                    </div>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- CONTENT -->
+
+            <main class="bus-content">
+
+
+                <!-- =================================
+                     PAGE INTRO
+                     ================================= -->
+
+                <section class="bus-intro">
+
+                    <div>
+
+                        <span>
+                            SCHOOL TRANSPORT
+                        </span>
+
+                        <h2>
+                            Your bus & route
+                        </h2>
+
+                        <p>
+                            Track your assigned bus,
+                            view stops and check
+                            today's transportation
+                            schedule.
+                        </p>
+
+                    </div>
+
+
+                    <div class="intro-bus-icon">
+                        🚌
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     MY ASSIGNED BUS
+                     ================================= -->
+
+                <section
+                    class="assigned-bus-card"
+                    id="my-bus"
+                >
+
+                    <div class="assigned-bus-top">
+
+                        <div>
+
+                            <span class="section-label">
+                                YOUR ASSIGNED BUS
+                            </span>
+
+                            <h3>
+                                Edvora Express
+                            </h3>
+
+                            <p>
+                                Bus ID: ED-204
+                            </p>
+
+                        </div>
+
+
+                        <span class="bus-status active">
+                            ● ON TIME
+                        </span>
+
+                    </div>
+
+
+                    <!-- BUS INFORMATION -->
+
+                    <div class="assigned-bus-info">
+
+
+                        <div class="bus-info-item">
+
+                            <span>
+                                DRIVER
+                            </span>
+
+                            <strong>
+                                Rajesh Singh
+                            </strong>
+
+                        </div>
+
+
+                        <div class="bus-info-item">
+
+                            <span>
+                                ROUTE
+                            </span>
+
+                            <strong>
+                                Route 04
+                            </strong>
+
+                        </div>
+
+
+                        <div class="bus-info-item">
+
+                            <span>
+                                SEATS
+                            </span>
+
+                            <strong>
+                                32 / 40
+                            </strong>
+
+                        </div>
+
+
+                        <div class="bus-info-item">
+
+                            <span>
+                                NEXT STOP
+                            </span>
+
+                            <strong>
+                                Model Town
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BUS ACTIONS -->
+
+                    <div class="assigned-bus-actions">
+
+                        <button
+                            type="button"
+                            class="primary-bus-button"
+                            id="track-bus"
+                        >
+
+                            <span>
+                                ◉
+                            </span>
+
+                            Track bus
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="secondary-bus-button"
+                            id="view-route"
+                        >
+
+                            View route
+                            <span>
+                                →
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     QUICK STATS
+                     ================================= -->
+
+                <section class="bus-stats">
+
+
+                    <article class="bus-stat-card">
+
+                        <div class="bus-stat-icon blue">
+                            ◉
+                        </div>
+
+                        <div>
+
+                            <span>
+                                TODAY'S STOPS
+                            </span>
+
+                            <strong>
+                                12
+                            </strong>
+
+                            <small>
+                                5 completed
+                            </small>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="bus-stat-card">
+
+                        <div class="bus-stat-icon green">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <span>
+                                ON-TIME RATE
+                            </span>
+
+                            <strong>
+                                96%
+                            </strong>
+
+                            <small>
+                                This month
+                            </small>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="bus-stat-card">
+
+                        <div class="bus-stat-icon orange">
+                            ◷
+                        </div>
+
+                        <div>
+
+                            <span>
+                                NEXT PICKUP
+                            </span>
+
+                            <strong>
+                                07:35
+                            </strong>
+
+                            <small>
+                                8 minutes away
+                            </small>
+
+                        </div>
+
+                    </article>
+
+
+                </section>
+                <!-- =====================================
+     ROUTE INFORMATION
+     ===================================== -->
+
+<section
+    class="route-section"
+    id="routes"
+>
+
+    <div class="section-heading">
+
+        <div>
+
+            <span class="section-label">
+                TODAY'S ROUTE
+            </span>
+
+            <h3>
+                Route 04 — Morning Pickup
+            </h3>
+
+        </div>
+
+
+        <span class="route-distance">
+            8.6 km
+        </span>
+
+    </div>
+
+
+    <!-- ROUTE PROGRESS -->
+
+    <div class="route-progress-card">
+
+        <div class="route-progress-top">
+
+            <div>
+
+                <strong>
+                    Route progress
+                </strong>
+
+                <span>
+                    5 of 12 stops completed
+                </span>
+
+            </div>
+
+            <strong>
+                42%
+            </strong>
+
+        </div>
+
+
+        <div class="route-progress-bar">
+
+            <span
+                style="width: 42%;"
+            ></span>
+
+        </div>
+
+    </div>
+
+
+    <!-- ROUTE TIMELINE -->
+
+    <div class="route-timeline">
+
+
+        <!-- STOP 1 -->
+
+        <div class="route-stop completed">
+
+            <div class="stop-marker">
+                ✓
+            </div>
+
+            <div class="stop-line">
+            </div>
+
+            <div class="stop-content">
+
+                <div>
+
+                    <strong>
+                        Green Valley School
+                    </strong>
+
+                    <span>
+                        Main Gate
+                    </span>
+
+                </div>
+
+                <time>
+                    07:05 AM
+                </time>
+
+            </div>
+
+        </div>
+
+
+        <!-- STOP 2 -->
+
+        <div class="route-stop completed">
+
+            <div class="stop-marker">
+                ✓
+            </div>
+
+            <div class="stop-line">
+            </div>
+
+            <div class="stop-content">
+
+                <div>
+
+                    <strong>
+                        Rose Garden
+                    </strong>
+
+                    <span>
+                        Bus Stop A
+                    </span>
+
+                </div>
+
+                <time>
+                    07:15 AM
+                </time>
+
+            </div>
+
+        </div>
+
+
+        <!-- STOP 3 -->
+
+        <div class="route-stop completed">
+
+            <div class="stop-marker">
+                ✓
+            </div>
+
+            <div class="stop-line">
+            </div>
+
+            <div class="stop-content">
+
+                <div>
+
+                    <strong>
+                        Shastri Nagar
+                    </strong>
+
+                    <span>
+                        Community Center
+                    </span>
+
+                </div>
+
+                <time>
+                    07:22 AM
+                </time>
+
+            </div>
+
+        </div>
+
+
+        <!-- STOP 4 -->
+
+        <div class="route-stop current">
+
+            <div class="stop-marker">
+                ●
+            </div>
+
+            <div class="stop-line">
+            </div>
+
+            <div class="stop-content">
+
+                <div>
+
+                    <strong>
+                        Model Town
+                    </strong>
+
+                    <span>
+                        Main Bus Stop
+                    </span>
+
+                </div>
+
+                <time>
+                    07:35 AM
+                </time>
+
+            </div>
+
+        </div>
+
+
+        <!-- STOP 5 -->
+
+        <div class="route-stop">
+
+            <div class="stop-marker">
+                5
+            </div>
+
+            <div class="stop-line">
+            </div>
+
+            <div class="stop-content">
+
+                <div>
+
+                    <strong>
+                        Civil Lines
+                    </strong>
+
+                    <span>
+                        Market Road
+                    </span>
+
+                </div>
+
+                <time>
+                    07:45 AM
+                </time>
+
+            </div>
+
+        </div>
+
+
+        <!-- STOP 6 -->
+
+        <div class="route-stop">
+
+            <div class="stop-marker">
+                6
+            </div>
+
+            <div class="stop-line">
+            </div>
+
+            <div class="stop-content">
+
+                <div>
+
+                    <strong>
+                        Ferozepur Road
+                    </strong>
+
+                    <span>
+                        Central Crossing
+                    </span>
+
+                </div>
+
+                <time>
+                    07:52 AM
+                </time>
+
+            </div>
+
+        </div>
+
+
+        <!-- FINAL STOP -->
+
+        <div class="route-stop final-stop">
+
+            <div class="stop-marker">
+                7
+            </div>
+
+            <div class="stop-content">
+
+                <div>
+
+                    <strong>
+                        Green Valley School
+                    </strong>
+
+                    <span>
+                        School Campus
+                    </span>
+
+                </div>
+
+                <time>
+                    08:00 AM
+                </time>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     AVAILABLE BUSES
+     ===================================== -->
+
+<section
+    class="all-buses-section"
+    id="all-buses"
+>
+
+    <div class="section-heading">
+
+        <div>
+
+            <span class="section-label">
+                EDVORA FLEET
+            </span>
+
+            <h3>
+                Available buses
+            </h3>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="filter-button"
+            id="bus-filter"
+        >
+            Filter ▾
+        </button>
+
+    </div>
+
+
+    <div class="bus-list">
+
+
+        <!-- BUS 1 -->
+
+        <article
+            class="fleet-bus-card"
+            data-status="active"
+        >
+
+            <div class="fleet-bus-icon">
+                🚌
+            </div>
+
+
+            <div class="fleet-bus-info">
+
+                <div class="fleet-bus-title">
+
+                    <h4>
+                        Edvora Express
+                    </h4>
+
+                    <span class="fleet-active">
+                        ● Active
+                    </span>
+
+                </div>
+
+                <p>
+                    ED-204 • Route 04
+                </p>
+
+            </div>
+
+
+            <div class="fleet-driver">
+
+                <span>
+                    DRIVER
+                </span>
+
+                <strong>
+                    Rajesh Singh
+                </strong>
+
+            </div>
+
+
+            <div class="fleet-seats">
+
+                <span>
+                    SEATS
+                </span>
+
+                <strong>
+                    32 / 40
+                </strong>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="fleet-view-button"
+                data-bus="ED-204"
+            >
+                View →
+            </button>
+
+        </article>
+
+
+
+        <!-- BUS 2 -->
+
+        <article
+            class="fleet-bus-card"
+            data-status="active"
+        >
+
+            <div class="fleet-bus-icon green-icon">
+                🚌
+            </div>
+
+
+            <div class="fleet-bus-info">
+
+                <div class="fleet-bus-title">
+
+                    <h4>
+                        Edvora Prime
+                    </h4>
+
+                    <span class="fleet-active">
+                        ● Active
+                    </span>
+
+                </div>
+
+                <p>
+                    ED-208 • Route 07
+                </p>
+
+            </div>
+
+
+            <div class="fleet-driver">
+
+                <span>
+                    DRIVER
+                </span>
+
+                <strong>
+                    Aman Verma
+                </strong>
+
+            </div>
+
+
+            <div class="fleet-seats">
+
+                <span>
+                    SEATS
+                </span>
+
+                <strong>
+                    28 / 40
+                </strong>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="fleet-view-button"
+                data-bus="ED-208"
+            >
+                View →
+            </button>
+
+        </article>
+
+
+
+        <!-- BUS 3 -->
+
+        <article
+            class="fleet-bus-card"
+            data-status="delayed"
+        >
+
+            <div class="fleet-bus-icon orange-icon">
+                🚌
+            </div>
+
+
+            <div class="fleet-bus-info">
+
+                <div class="fleet-bus-title">
+
+                    <h4>
+                        Edvora City
+                    </h4>
+
+                    <span class="fleet-delayed">
+                        ● Delayed
+                    </span>
+
+                </div>
+
+                <p>
+                    ED-212 • Route 09
+                </p>
+
+            </div>
+
+
+            <div class="fleet-driver">
+
+                <span>
+                    DRIVER
+                </span>
+
+                <strong>
+                    Mohit Sharma
+                </strong>
+
+            </div>
+
+
+            <div class="fleet-seats">
+
+                <span>
+                    SEATS
+                </span>
+
+                <strong>
+                    35 / 40
+                </strong>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="fleet-view-button"
+                data-bus="ED-212"
+            >
+                View →
+            </button>
+
+        </article>
+
+
+
+        <!-- BUS 4 -->
+
+        <article
+            class="fleet-bus-card"
+            data-status="offline"
+        >
+
+            <div class="fleet-bus-icon gray-icon">
+                🚌
+            </div>
+
+
+            <div class="fleet-bus-info">
+
+                <div class="fleet-bus-title">
+
+                    <h4>
+                        Edvora Mini
+                    </h4>
+
+                    <span class="fleet-offline">
+                        ● Offline
+                    </span>
+
+                </div>
+
+                <p>
+                    ED-215 • Route 11
+                </p>
+
+            </div>
+
+
+            <div class="fleet-driver">
+
+                <span>
+                    DRIVER
+                </span>
+
+                <strong>
+                    Vikram Patel
+                </strong>
+
+            </div>
+
+
+            <div class="fleet-seats">
+
+                <span>
+                    SEATS
+                </span>
+
+                <strong>
+                    18 / 24
+                </strong>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="fleet-view-button"
+                data-bus="ED-215"
+            >
+                View →
+            </button>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     NOTIFICATIONS
+     ===================================== -->
+
+<section
+    class="bus-notifications"
+    id="notifications"
+>
+
+    <div class="section-heading">
+
+        <div>
+
+            <span class="section-label">
+                UPDATES
+            </span>
+
+            <h3>
+                Transport notifications
+            </h3>
+
+        </div>
+
+    </div>
+
+
+    <div class="bus-notification-list">
+
+
+        <div class="bus-notification-item">
+
+            <div class="notification-symbol blue">
+                🚌
+            </div>
+
+            <div>
+
+                <strong>
+                    Bus ED-204 is on schedule
+                </strong>
+
+                <p>
+                    Your assigned bus has
+                    started Route 04.
+                </p>
+
+                <small>
+                    5 minutes ago
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="bus-notification-item">
+
+            <div class="notification-symbol orange">
+                !
+            </div>
+
+            <div>
+
+                <strong>
+                    Route 09 has a delay
+                </strong>
+
+                <p>
+                    Expected delay of
+                    approximately 8 minutes.
+                </p>
+
+                <small>
+                    18 minutes ago
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     FOOTER
+     ===================================== -->
+
+<footer class="bus-footer">
+
+    <p>
+        © 2026 Edvora — Smart School
+        Transportation
+    </p>
+
+
+    <div>
+
+        <a href="#">
+            Privacy
+        </a>
+
+        <a href="#">
+            Support
+        </a>
+
+        <a href="#">
+            Terms
+        </a>
+
+    </div>
+
+</footer>
+
+
+</main>
+
+</div>
+
+</div>
+
+
+<!-- =====================================
+     MOBILE OVERLAY
+     ===================================== -->
+
+<div
+    class="bus-overlay"
+    id="bus-overlay"
+></div>
+
+
+<!-- =====================================
+     JAVASCRIPT
+     ===================================== -->
+
+<script src="bus.js"></script>
+
+
+</body>
+
+</html>
